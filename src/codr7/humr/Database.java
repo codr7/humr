@@ -11,7 +11,15 @@ public class Database extends Schema {
 
     public final Table users = add(new Table("users"));
     public final LongColumn userId = new LongColumn(users, "id", Option.PrimaryKey);
-    public final StringColumn userName = new StringColumn(users, "String", 100, Option.Nullable);
+    public final StringColumn userName = new StringColumn(users, "name", 100);
 
     public final Index userNameIndex = new Index(users, "userName", false, Stream.of(userName));
+
+    public final Sequence resourceIds = add(new Sequence("resourceIds", 1));
+
+    public final Table resources = add(new Table("resources"));
+    public final LongColumn resourceId = new LongColumn(resources, "id", Option.PrimaryKey);
+    public final StringColumn resourceName = new StringColumn(resources, "name", 100);
+
+    public final Index resourceNameIndex = new Index(resources, "resourceName", false, Stream.of(resourceName));
 }

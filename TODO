@@ -1,2 +1,3 @@
-* add resource
+* add resource createdBy foreign key
+** fill in from cx.currentUser
 * add calendar
