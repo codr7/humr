@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="jetty-servlet-api-4.0.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jetty-home-12.0.16/lib/jetty-servlet-api-4.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-home-12.0.16/lib/jetty-http-12.0.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-home-12.0.16/lib/jetty-security-12.0.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-home-12.0.16/lib/jetty-io-12.0.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-home-12.0.16/lib/jetty-server-12.0.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-home-12.0.16/lib/jetty-session-12.0.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-home-12.0.16/lib/jetty-util-12.0.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-home-12.0.16/lib/jetty-rewrite-12.0.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-home-12.0.16/lib/jetty-jakarta-servlet-api-5.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-home-12.0.16/lib/jetty-ee10-servlet-12.0.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-home-12.0.16/lib/jetty-ee10-servlets-12.0.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-home-12.0.16/lib/jakarta.servlet-api-6.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

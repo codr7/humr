@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="slf4j">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jetty-home-12.0.16/lib/logging/jetty-slf4j-impl-12.0.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-home-12.0.16/lib/logging/slf4j-api-2.0.16.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
