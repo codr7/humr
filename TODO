@@ -1,3 +1,9 @@
-* add resource createdBy foreign key
-** fill in from cx.currentUser
+* add resource createdAt/By
+** fix record set return value
+** add record foreign key set
+** commit
+
+* add jwt Password
+** hostr
+
 * add calendar
