@@ -7,6 +7,7 @@ import codr7.tyred.Record;
 import codr7.tyred.Table;
 
 import java.time.OffsetDateTime;
+import java.util.stream.Stream;
 
 public class Resource extends Model {
     public Resource(final Context cx) {
@@ -44,7 +45,7 @@ public class Resource extends Model {
     }
 
     @Override
-    public Table[] tables() {
-        return new Table[]{db.resources};
+    public Stream<Table> tables() {
+        return Stream.of(db.resources);
     }
 }

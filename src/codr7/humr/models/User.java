@@ -6,6 +6,8 @@ import codr7.tyred.Record;
 import codr7.tyred.Table;
 import codr7.humr.Context;
 
+import java.util.stream.Stream;
+
 public class User extends Model {
     public User(final Context cx) {
         super(cx.db, new Record());
@@ -25,7 +27,7 @@ public class User extends Model {
     }
 
     @Override
-    public Table[] tables() {
-        return new Table[]{db.users};
+    public Stream<Table> tables() {
+        return Stream.of(db.users);
     }
 }

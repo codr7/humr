@@ -6,6 +6,7 @@ import codr7.tyred.Record;
 import codr7.tyred.Table;
 
 import java.time.LocalDateTime;
+import java.util.stream.Stream;
 
 public class Calendar extends Model {
     public Calendar(final Resource rc) {
@@ -56,7 +57,7 @@ public class Calendar extends Model {
     }
 
     @Override
-    public Table[] tables() {
-        return new Table[]{db.calendars};
+    public Stream<Table> tables() {
+        return Stream.of(db.calendars);
     }
 }
