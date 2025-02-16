@@ -23,6 +23,11 @@ public class Calendar extends Model {
         super(db, r);
     }
 
+    public Calendar add(final int q) {
+        record().set(db.calendarTotal, total() + q);
+        return this;
+    }
+
     public LocalDateTime end() {
         return record().get(db.calendarEnd);
     }
@@ -39,15 +44,15 @@ public class Calendar extends Model {
         return record().get(db.calendarTotal);
     }
 
-    public int used() {
-        return record().get(db.calendarUsed);
-    }
-
-    public Calendar adjust(final int q) {
+    public Calendar use(final int q) {
         record().set(db.calendarTotal, total() - q)
                 .set(db.calendarUsed, used() + q);
 
         return this;
+    }
+
+    public int used() {
+        return record().get(db.calendarUsed);
     }
 
     @Override
