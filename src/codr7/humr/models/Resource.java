@@ -30,6 +30,10 @@ public class Resource extends Model {
         return new User(db, record().get(db.resourceCreatedBy));
     }
 
+    public long id() {
+        return record().get(db.resourceId);
+    }
+
     public String name() {
         return record().get(db.resourceName);
     }

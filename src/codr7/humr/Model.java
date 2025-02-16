@@ -4,7 +4,7 @@ import codr7.tyred.BaseModel;
 import codr7.tyred.Record;
 
 public abstract class Model extends BaseModel {
-    protected final Database db;
+    public final Database db;
 
     public Model(final Database db, final Record r) {
         super(r);
