@@ -12,6 +12,10 @@ public class User extends Model {
         record().set(db.userId, db.userIds.nextValue(cx.dbContext));
     }
 
+    public User(final Database db, final Record r) {
+        super(db, r);
+    }
+
     public String name() {
         return record().get(db.userName);
     }
