@@ -9,7 +9,6 @@ import codr7.humr.Context;
 public class User extends Model {
     public User(final Context cx) {
         super(cx.db, new Record());
-        record().set(db.userId, db.userIds.nextValue(cx.dbContext));
     }
 
     public User(final Database db, final Record r) {

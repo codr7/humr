@@ -8,11 +8,8 @@ import codr7.tyred.columns.*;
 import java.util.stream.Stream;
 
 public class Database extends Schema {
-    public final Sequence userIds = add(new Sequence("userIds", 1));
     public final Table users = add(new Table("users"));
-    public final LongColumn userId = new LongColumn(users, "id", Option.PrimaryKey);
-    public final StringColumn userName = new StringColumn(users, "name", 100);
-    public final Index userNameIndex = new Index(users, "userName", false, Stream.of(userName));
+    public final StringColumn userName = new StringColumn(users, "name", 100, Option.PrimaryKey);
 
     public final Sequence resourceIds = add(new Sequence("resourceIds", 1));
     public final Table resources = add(new Table("resources"));
