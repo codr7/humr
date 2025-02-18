@@ -15,6 +15,7 @@ public class Database extends Schema {
     public final Table resources = add(new Table("resources"));
     public final LongColumn resourceId = new LongColumn(resources, "id", Option.PrimaryKey);
     public final StringColumn resourceName = new StringColumn(resources, "name", 100);
+    public final IntegerColumn resourceQuantity = new IntegerColumn(resources, "quantity");
     public final DateTimezColumn resourceCreatedAt = new DateTimezColumn(resources, "createdAt");
     public final ForeignKey resourceCreatedBy = new ForeignKey(resources, "resourceCreatedBy", users);
     public final Index resourceNameIndex = new Index(resources, "resourceName", false, Stream.of(resourceName));

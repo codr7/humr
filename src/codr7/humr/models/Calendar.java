@@ -16,7 +16,7 @@ public class Calendar extends Model {
                 .set(db.calendarResource, rc.record())
                 .set(db.calendarStart, LocalDateTime.MIN)
                 .set(db.calendarEnd, LocalDateTime.MAX)
-                .set(db.calendarTotal, 0)
+                .set(db.calendarTotal, rc.quantity())
                 .set(db.calendarUsed, 0);
     }
 

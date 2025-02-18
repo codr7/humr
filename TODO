@@ -1,2 +1,18 @@
-* add jwt Password
+* add Resource quantity
+** use for calendar init
+
+* add static Calendar.update()
 ** hostr
+
+* add Employee
+** foreign key user/resource
+
+* resource links
+** store all links for each resource
+
+* add projects
+
+* add tasks
+** add links
+
+* add queues

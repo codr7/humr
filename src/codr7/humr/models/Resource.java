@@ -39,8 +39,17 @@ public class Resource extends Model {
         return record().get(db.resourceName);
     }
 
+    public int quantity() {
+        return record().get(db.resourceQuantity);
+    }
+
     public Resource setName(final String v) {
         record().set(db.resourceName, v);
+        return this;
+    }
+
+    public Resource setQuantity(final int v) {
+        record().set(db.resourceQuantity, v);
         return this;
     }
 

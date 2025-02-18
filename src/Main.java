@@ -16,6 +16,7 @@ public class Main {
 
         final var r = new Resource(cx);
         r.setName("Employees");
+        r.setQuantity(1);
         r.store(cx);
 
         cx.dbContext.rollback();
