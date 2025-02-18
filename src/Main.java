@@ -1,7 +1,11 @@
 import codr7.humr.models.Resource;
 import codr7.humr.models.User;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.util.Arrays;
+
 import codr7.humr.Context;
+import codr7.humr.stores.ResourceStore;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -14,10 +18,13 @@ public class Main {
 
         cx.setUser(u);
 
-        final var r = new Resource(cx);
-        r.setName("Employees");
-        r.setQuantity(1);
-        r.store(cx);
+        final var rc = new Resource(cx);
+        rc.setName("Employees");
+        rc.setQuantity(1);
+        rc.store(cx);
+
+        final var rcs = new ResourceStore(cx);
+        System.out.println(Arrays.toString(rcs.getCalendar(rc, LocalDateTime.MIN, LocalDateTime.MAX)));
 
         cx.dbContext.rollback();
     }

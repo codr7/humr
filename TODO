@@ -1,5 +1,9 @@
-* add Resource quantity
-** use for calendar init
+* finish ResourceStore.getCalendar()
+** add start/end args
+
+* convert Query.findAll() to return stream
+* convert ResourceSource.getCalendar() to return stream
+* extract resource/calendar test
 
 * add static Calendar.update()
 ** hostr
