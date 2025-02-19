@@ -9,13 +9,16 @@ import java.time.LocalDateTime;
 import java.util.stream.Stream;
 
 public class Calendar extends Model {
+    public static final LocalDateTime START = LocalDateTime.of(1900, 1, 1, 0, 0, 0);
+    public static final LocalDateTime END = LocalDateTime.of(9999, 12, 31, 23, 59, 59);
+
     public Calendar(final Resource rc) {
         super(rc.db, new Record());
 
         record()
                 .set(db.calendarResource, rc.record())
-                .set(db.calendarStart, LocalDateTime.MIN)
-                .set(db.calendarEnd, LocalDateTime.MAX)
+                .set(db.calendarStart, START)
+                .set(db.calendarEnd, END)
                 .set(db.calendarTotal, rc.quantity())
                 .set(db.calendarUsed, 0);
     }

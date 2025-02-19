@@ -1,6 +1,7 @@
 package codr7.humr.tests;
 
 import codr7.humr.Database;
+import codr7.humr.models.Calendar;
 import codr7.humr.models.Resource;
 import codr7.humr.stores.ResourceStore;
 import org.junit.jupiter.api.Test;
@@ -28,7 +29,7 @@ public class ResourceTest extends BaseTest {
         final var c = cs[0];
         assertEquals(1, c.get(db.calendarTotal));
         assertEquals(0, c.get(db.calendarUsed));
-        assertEquals(LocalDateTime.MIN, c.get(db.calendarStart));
-        assertEquals(LocalDateTime.MAX, c.get(db.calendarEnd));
+        assertEquals(Calendar.START, c.get(db.calendarStart));
+        assertEquals(Calendar.END, c.get(db.calendarEnd));
     }
 }

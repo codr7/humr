@@ -1,6 +1,3 @@
-* extract resource create test
-** fix min/max date
-
 * add static Calendar.update()
 ** hostr
 
