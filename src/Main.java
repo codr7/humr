@@ -17,15 +17,6 @@ public class Main {
         u.store(cx);
 
         cx.setUser(u);
-
-        final var rc = new Resource(cx);
-        rc.setName("Employees");
-        rc.setQuantity(1);
-        rc.store(cx);
-
-        final var rcs = new ResourceStore(cx);
-        System.out.println(Arrays.toString(rcs.getCalendar(rc, LocalDateTime.MIN, LocalDateTime.MAX)));
-
         cx.dbContext.rollback();
     }
 }

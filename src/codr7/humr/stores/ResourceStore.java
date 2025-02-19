@@ -8,13 +8,14 @@ import codr7.tyred.Query;
 import codr7.tyred.Record;
 
 import java.time.LocalDateTime;
+import java.util.stream.Stream;
 
 public class ResourceStore extends Store {
     public ResourceStore(final Context cx) {
         super(cx);
     }
 
-    public Record[] getCalendar(final Resource rc, final LocalDateTime start, final LocalDateTime end) {
+    public Stream<Record> getCalendar(final Resource rc, final LocalDateTime start, final LocalDateTime end) {
         return new Query(db.calendars)
                 .select(db.calendars.columns().map(c -> (Column)c))
                 .where(db.calendarResource.foreignCondition(rc.record()))
